@@ -7,7 +7,7 @@ module.exports = {
       password: 'qwe123'
     },
     migrations: {
-      directory: __dirname + '/migrations',
+      directory: __dirname + '/scr/migrations',
       tableName: 'knex_migrations'
     },
     pool: {
@@ -19,7 +19,7 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: __dirname + '/migrations',
+      directory: __dirname + '/src/migrations',
     },
     pool: {
       min: 2,
