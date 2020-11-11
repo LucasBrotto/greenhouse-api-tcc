@@ -1,0 +1,45 @@
+Instalar:
+	Postgres
+	Postman
+	Node/npm/knex
+	Nodemon
+
+
+- package.json
+    - arquivo contendo as dependencias e scripts para rodar com npm
+- src
+    - pasta contendo o codigo
+- src/components
+    - pasta contendo arquivos de configuração ou auxiliares para a codificação
+- src/components/db.js
+    - arquivo contendo a instancia do knex, nele eu digo qual o arquivo ele deve utilizar para configurar o knex
+- src/components/DefaultResponse.js
+    - classe para retorno de dados padrão, utilizar as request de usuario como exemplo
+- src/components/env.js
+    - arquivo com instancias globais para criptografia de senha e geração de token
+- src/controllers
+    - pasta contendo os Controllers, os Controllers são onde se deve criar as request
+- src/controllers/UserController.js
+    - arquivo com as request referentes ao usuario
+- src/models
+    - pasta contendo as Models, as models são aonde se deve fazer operações referentes ao banco de dados e dados sensiveis(senhas descryptadas)
+- src/UserModel.js
+    - class com funções estaticas para servir ao controllers
+- src/migrations
+    - pasta contendo as migrations que são arquivos criados pelo knex para criar tabelas no banco de dados
+- src/index.js
+    - arquivo principal do codigo, contendo a instancia do express para criar o servidor, o body parser para tratar os dados vindos como json, consing que utilizo para carrgar os arquivos do controller
+- src/knexfile.js
+    - arquivo contendo as configurações do banco de dados como host, user e senha
+
+
+
+codigos:
+npm i: instala dependencias do package.json
+npm i -g knex: instala o knex no pc
+knex migrate:latest -> rodar após codificar o arquivo de migrate novo, e para criar a tabela no banco de dados
+
+postgres:
+ - psql -U postgres
+ - \c api -> conecta no banco de dados api
+ - \dt -> mostra as tabelas que tem
