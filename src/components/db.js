@@ -12,4 +12,6 @@ const env =  {
 };
 const db = knex(config[env])
 
+console.log(db)
+
 module.exports = db
