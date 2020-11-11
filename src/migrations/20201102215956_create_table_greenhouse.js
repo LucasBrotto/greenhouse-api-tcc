@@ -6,7 +6,7 @@ exports.up = function(knex) {
         table.integer('humidity')
         table.integer('ventilation')
         table.integer('irrigation')
-        table.integer('id_user').references('id').inTable('user')
+        table.integer('id_user').references('id').inTable('users_table')
     })
 };
 
