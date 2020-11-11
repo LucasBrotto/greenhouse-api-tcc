@@ -1,5 +1,5 @@
 module.exports = {
-  client: 'pg',
+  client: 'postgresql',
   connection: {
     host: 'ec2-34-237-247-76.compute-1.amazonaws.com',
     database: 'd1gcv8b66d852j',
@@ -8,6 +8,7 @@ module.exports = {
   },
   migrations: {
     directory: __dirname + '/src/migrations',
+    tableName: 'knex_migrations'
   },
   pool: {
     min: 2,
